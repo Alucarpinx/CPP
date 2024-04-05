@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reservation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dodgeball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sedan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Compact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="reservation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dodgeball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sedan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pickup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dodgeball_team.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="all_reservations.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="black_pickup.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="black_sedan.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="blue_compact.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="blue_sedan.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="green_pickup.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="green_sedan.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="purple_pickup.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="red_compact.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="yellow_compact.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="sample.txt" />
+  </ItemGroup>
+</Project>

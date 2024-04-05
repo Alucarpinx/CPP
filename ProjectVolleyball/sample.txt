@@ -1,0 +1,414 @@
+ cout << "6. Print Reservations " << endl;
+            cout << "------------------------" << endl;
+
+            string PASSword = "Arhect";
+            cout << "------------------------\n";
+            cout << "Administrator Password: ";
+            cin >> PASSword;
+            if (PASSword == "Arhect") {
+                ofstream outputResFile = openResFile();
+
+            // vector<reservation> reserved;
+                for (int g = 0; g < reserved.size(); ++g) {
+                    if (reserved.at(g).get_carType() == "Pickup") {
+                        if (reserved.at(g).get_carColor() == "Purple") {
+                            purplePickup.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Green") {
+                            greenPickup.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Black") {
+                            blackPickup.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Pickup reservations by color\n";
+                        }
+                    }
+                    else if (reserved.at(g).get_carType() == "Sedan") {
+                        if (reserved.at(g).get_carColor() == "Blue") {
+                            blueSedan.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Black") {
+                            blackSedan.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Green") {
+                            greenSedan.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Sedan reservations by color\n";
+                        }
+                    }
+                    else if (reserved.at(g).get_carType() == "Compact") {
+                        if (reserved.at(g).get_carColor() == "Red") {
+                            redCompact.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Blue") {
+                            blueCompact.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Yellow") {
+                            yellowCompact.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Compact reservations by color\n";
+                        }
+                    }
+                    else {
+                        cout << "\nError sorting reservations by Vehicle\n";
+                    }
+                }// end of looping through reservations vector
+              
+                outputResFile << "\nVehicle assignment List for Purple Pick-up\n";
+                cout << "Vehicle assignment List for Purple Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Pat \n";
+                cout << "Driver: Pat \n";
+                
+                for (int l = 0; l < purplePickup.size(); ++l) {
+                    outputResFile << "Name: " << purplePickup.at(l).getName() << " Location: " << purplePickup.at(l).getSeat() << endl;
+                    cout << "Name: " << purplePickup.at(l).getName() << " Location: " << purplePickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Green Pick-up\n";
+                cout << "Vehicle assignment List for Green Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Jane \n";
+                cout << "Driver: Jane \n";
+                for (int l = 0; l < greenPickup.size(); ++l) {
+                    outputResFile << "Name: " << greenPickup.at(l).getName() << " Location: " << greenPickup.at(l).getSeat() << endl;
+                    cout << "Name: " << greenPickup.at(l).getName() << " Location: " << greenPickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Black Pick-up\n";
+                cout << "Vehicle assignment List for Black Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Tim \n";
+                cout << "Driver: Tim \n";
+                for (int l = 0; l < blackPickup.size(); ++l) {
+                    outputResFile << "Name: " << blackPickup.at(l).getName() << " Location: " << blackPickup.at(l).getSeat() << endl;
+                    cout << "Name: " << blackPickup.at(l).getName() << " Location: " << blackPickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Red Pick-up\n";
+                cout << "Vehicle assignment List for Red Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Ben \n";
+                cout << "Driver: Ben \n";
+                for (int l = 0; l < redCompact.size(); ++l) {
+                    outputResFile << "Name: " << redCompact.at(l).getName() << " Location: " << redCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << redCompact.at(l).getName() << " Location: " << redCompact.at(l).getSeat() << endl;
+                }
+                
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Blue Pick-up\n";
+                cout << "Vehicle assignment List for Blue Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Art \n";
+                cout << "Driver: Art \n";
+                for (int l = 0; l < blueCompact.size(); ++l) {
+                    outputResFile << "Name: " << blueCompact.at(l).getName() << " Location: " << blueCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << blueCompact.at(l).getName() << " Location: " << blueCompact.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Yellow Pick-up\n";
+                cout << "Vehicle assignment List for Yellow Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Ann \n";
+                cout << "Driver: Ann \n";
+                for (int l = 0; l < yellowCompact.size(); ++l) {
+                    outputResFile << "Name: " << yellowCompact.at(l).getName() << " Location: " << yellowCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << yellowCompact.at(l).getName() << " Location: " << yellowCompact.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Blue Pick-up\n";
+                cout << "Vehicle assignment List for Blue Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Grace \n";
+                cout << "Driver: Grace \n";
+                for (int l = 0; l < blueSedan.size(); ++l) {
+                    outputResFile << "Name: " << blueSedan.at(l).getName() << " Location: " << blueSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << blueSedan.at(l).getName() << " Location: " << blueSedan.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Black Pick-up\n";
+                cout << "Vehicle assignment List for Black Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Lary \n";
+                cout << "Driver: Lary \n";
+                for (int l = 0; l < blackSedan.size(); ++l) {
+                    outputResFile << "Name: " << blackSedan.at(l).getName() << " Location: " << blackSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << blackSedan.at(l).getName() << " Location: " << blackSedan.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Green Pick-up\n";
+                cout << "Vehicle assignment List for Green Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Jessie \n";
+                cout << "Driver: Jessie \n";
+                for (int l = 0; l < greenSedan.size(); ++l) {
+                    outputResFile << "Name: " << greenSedan.at(l).getName() << " Location: " << greenSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << greenSedan.at(l).getName() << " Location: " << greenSedan.at(l).getSeat() << endl;
+                }
+                
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile.close();
+            }
+            else {
+                cout << "Incorrect Admin Password.\n";
+            }
+
+
+
+
+                vector<reservation> purplePickup;
+    vector<reservation> greenPickup;
+    vector<reservation> blackPickup;
+    vector<reservation> redCompact;
+    vector<reservation> blueCompact;
+    vector<reservation> yellowCompact;
+    vector<reservation> blueSedan;
+    vector<reservation> blackSedan;
+    vector<reservation> greenSedan;
+
+
+
+
+
+    ofstream openResFile() {
+    string outputResFileName = "all_reservations.txt";
+    ofstream outputResFile;
+    outputResFile.open(outputResFileName);
+    if (!outputResFile.is_open()) {
+        cout << "\nUnable to open Reservation output file... Program Terminated\n";
+        exit(1);
+    }
+    return outputResFile;
+}
+
+        case 6: {
+            //ends program
+            cout << "6. Print Reservations " << endl;
+            cout << "------------------------" << endl;
+
+            string PASSword = "Arhect";
+            cout << "------------------------\n";
+            cout << "Administrator Password: ";
+            cin >> PASSword;
+            if (PASSword == "Arhect") {
+                ofstream outputResFile = openResFile();
+
+            // vector<reservation> reserved;
+                for (int g = 0; g < reserved.size(); ++g) {
+                    if (reserved.at(g).get_carType() == "Pickup") {
+                        if (reserved.at(g).get_carColor() == "Purple") {
+                            purplePickup.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Green") {
+                            greenPickup.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Black") {
+                            blackPickup.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Pickup reservations by color\n";
+                        }
+                    }
+                    else if (reserved.at(g).get_carType() == "Sedan") {
+                        if (reserved.at(g).get_carColor() == "Blue") {
+                            blueSedan.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Black") {
+                            blackSedan.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Green") {
+                            greenSedan.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Sedan reservations by color\n";
+                        }
+                    }
+                    else if (reserved.at(g).get_carType() == "Compact") {
+                        if (reserved.at(g).get_carColor() == "Red") {
+                            redCompact.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Blue") {
+                            blueCompact.push_back(reserved[g]);
+                        }
+                        else if (reserved.at(g).get_carColor() == "Yellow") {
+                            yellowCompact.push_back(reserved[g]);
+                        }
+                        else {
+                            cout << "\nError sorting Compact reservations by color\n";
+                        }
+                    }
+                    else {
+                        cout << "\nError sorting reservations by Vehicle\n";
+                    }
+                }// end of looping through reservations vector
+              
+                outputResFile << "\nVehicle assignment List for Purple Pick-up\n";
+                cout << "Vehicle assignment List for Purple Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Pat \n";
+                cout << "Driver: Pat \n";
+                
+                for (int l = 0; l < purplePickup.size(); ++l) {
+                    outputResFile << "Name: " << purplePickup.at(l).getName() << " Location: " << purplePickup.at(l).getSeat() << endl;
+                    cout << "Name: " << purplePickup.at(l).getName() << " Location: " << purplePickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Green Pick-up\n";
+                cout << "Vehicle assignment List for Green Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Jane \n";
+                cout << "Driver: Jane \n";
+                for (int l = 0; l < greenPickup.size(); ++l) {
+                    outputResFile << "Name: " << greenPickup.at(l).getName() << " Location: " << greenPickup.at(l).getSeat() << endl;
+                    cout << "Name: " << greenPickup.at(l).getName() << " Location: " << greenPickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Black Pick-up\n";
+                cout << "Vehicle assignment List for Black Pick-up\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Tim \n";
+                cout << "Driver: Tim \n";
+                for (int l = 0; l < blackPickup.size(); ++l) {
+                    outputResFile << "Name: " << blackPickup.at(l).getName() << " Location: " << blackPickup.at(l).getSeat() << endl;
+                    cout << "Name: " << blackPickup.at(l).getName() << " Location: " << blackPickup.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Red Pick-up\n";
+                cout << "Vehicle assignment List for Red Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Ben \n";
+                cout << "Driver: Ben \n";
+                for (int l = 0; l < redCompact.size(); ++l) {
+                    outputResFile << "Name: " << redCompact.at(l).getName() << " Location: " << redCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << redCompact.at(l).getName() << " Location: " << redCompact.at(l).getSeat() << endl;
+                }
+                
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Blue Pick-up\n";
+                cout << "Vehicle assignment List for Blue Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Art \n";
+                cout << "Driver: Art \n";
+                for (int l = 0; l < blueCompact.size(); ++l) {
+                    outputResFile << "Name: " << blueCompact.at(l).getName() << " Location: " << blueCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << blueCompact.at(l).getName() << " Location: " << blueCompact.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Yellow Pick-up\n";
+                cout << "Vehicle assignment List for Yellow Compact\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Ann \n";
+                cout << "Driver: Ann \n";
+                for (int l = 0; l < yellowCompact.size(); ++l) {
+                    outputResFile << "Name: " << yellowCompact.at(l).getName() << " Location: " << yellowCompact.at(l).getSeat() << endl;
+                    cout << "Name: " << yellowCompact.at(l).getName() << " Location: " << yellowCompact.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Blue Pick-up\n";
+                cout << "Vehicle assignment List for Blue Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Grace \n";
+                cout << "Driver: Grace \n";
+                for (int l = 0; l < blueSedan.size(); ++l) {
+                    outputResFile << "Name: " << blueSedan.at(l).getName() << " Location: " << blueSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << blueSedan.at(l).getName() << " Location: " << blueSedan.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Black Pick-up\n";
+                cout << "Vehicle assignment List for Black Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Lary \n";
+                cout << "Driver: Lary \n";
+                for (int l = 0; l < blackSedan.size(); ++l) {
+                    outputResFile << "Name: " << blackSedan.at(l).getName() << " Location: " << blackSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << blackSedan.at(l).getName() << " Location: " << blackSedan.at(l).getSeat() << endl;
+                }
+
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile << "Vehicle assignment List for Green Pick-up\n";
+                cout << "Vehicle assignment List for Green Sedan\n";
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+                outputResFile << "Driver: Jessie \n";
+                cout << "Driver: Jessie \n";
+                for (int l = 0; l < greenSedan.size(); ++l) {
+                    outputResFile << "Name: " << greenSedan.at(l).getName() << " Location: " << greenSedan.at(l).getSeat() << endl;
+                    cout << "Name: " << greenSedan.at(l).getName() << " Location: " << greenSedan.at(l).getSeat() << endl;
+                }
+                
+                outputResFile << "----------------------------------------------------\n";
+                cout << "----------------------------------------------------\n";
+
+                outputResFile.close();
+            }
+            else {
+                cout << "Incorrect Admin Password.\n";
+            }
+            break; }
